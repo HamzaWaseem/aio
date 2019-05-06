@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aio-Cars offical website">
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700%7CLora:400,400i%7CShadows+Into+Light:400" rel="stylesheet" />
+
+  <title>Aio Cars</title>
+  <![endif]-->
+</head>
+<%#= binding.pry %>
+<body id="page1">
+<div class="main-bg">
+  <div class="bg">
+    <!--==============================header=================================-->
+    <header>
+      <div class="main">
+        <div class="wrapper">
+                    <a href="/">  <%= image_tag "logo.png" ,size: "100" %>  </a>
+          <div class="fright">
+            <div class="indent"> <span class="phone">Tel: +92 321 8834539</span> </div>
+          </div>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li><a class="active" href="/">Home</a></li>
+<!--            <li><%#= redirect_to :/maintenance" %></li>-->
+            <li><%= link_to('Maintenance', maintenance_path) %></li>
+
+            <li><a href="/wash">Wash</a></li>
+            <li><a href="/modification">Modification</a></li>
+            <li><a href="/selling">Selling</a></li>
+            <li><a href="/about_us">About Us</a></li>
+          </ul>
+        </nav>
+        <div >
+          <br>
+        </div>
+<!--        <div class="slider-wrapper">-->
+<!--          <div class="slider">-->
+<!--            <ul class="items">-->
+<!--              <li> <%#= image_tag ("slider-img1.png") %> </li>-->
+<!--              <li> <%#= image_tag "slider-img2.png" %> </li>-->
+<!--              <li> <%#= image_tag "slider-img3.png" %> </li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--          <a class="prev" href="">prev</a> <a class="next" href="">next</a> </div>-->
+      </div>
+    </header>
+
+
+
+
+
+    <body>
+    <div class="container_12">
+    <div class="wrapper p5">
+      <article class="grid_4">
+        <div class="wrapper">
+          <figure class="img-indent">
+            <%= image_tag "page1-img1.png" %>
+            <!--                  <img src="page1-img1.png" alt="">-->
+          </figure>
+          <div class="extra-wrap">
+            <h4>Engine Repair</h4>
+            <p class="p2">Without proper maintenance, your vehicle will be a lot more likely to be prone to more serious problems in the future that could lead to you being greatly out of pocket.</p>
+            <!--                  <a class="button" href="#">Read More</a>-->
+          </div>
+        </div>
+      </article>
+      <article class="grid_4">
+        <div class="wrapper">
+          <figure class="img-indent">
+            <%= image_tag "page1-img2.png" %>
+            <!--                  <img src="page1-img2.png" alt="">-->
+          </figure>
+          <div class="extra-wrap">
+            <h4>Wheel Alignment</h4>
+            <p class="p2">Misalignment may also cause vibration that you'll feel especially in the steering wheel. SImply put, proper wheel alignments allow for safer driving. Wheel alignment will also extend the life of your tires. </p>
+            <!--                  <a class="button" href="#">Read More</a>-->
+          </div>
+        </div>
+      </article>
+      <article class="grid_4">
+        <div class="wrapper">
+          <figure class="img-indent">
+            <%= image_tag "page1-img3.png" %>
+            <!--                  <img src="page1-img3.png" alt="">-->
+          </figure>
+          <div class="extra-wrap">
+            <h4>Fluid Exchanges</h4>
+            <p class="p2"> Over time, dirt can cause corrosion and decrease the life of an engine. ... Routine oil and filter changes help remove particles and sludge and keep engines at peak condition. Improves gas mileage. Poor engine lubrication can lead to increased fuel consumption, so make sure there is enough clean oil in the engine.</p>
+            <!--                  <a class="button" href="#">Read More</a> -->
+          </div>
+        </div>
+      </article>
+    </div>
+    </div>
+
+    <%= yield %>
+    </body>
+
+
+
+
+
+    <!--==============================footer=================================-->
+    <footer>
+      <div class="main"> <span>Copyright &copy; <a href="#">Aio Car</a> All Rights Reserved</span> </div>
+    </footer>
+  </div>
+</div>
+<script type="text/javascript">Cufon.now();</script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('.slider')._TMS({
+            duration: 1000,
+            easing: 'easeOutQuint',
+            preset: 'simpleFade',
+            slideshow: 7000,
+            banners: false,
+            pauseOnHover: true,
+            pagination: false,
+            pagNums: false,
+            nextBu: '.next',
+            prevBu: '.prev'
+        });
+    });
+</script>
+</body>
+</html>

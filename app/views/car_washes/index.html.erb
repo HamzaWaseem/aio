@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Car Washes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Rates</th>
+      <th>Body</th>
+      <th>Published at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @car_washes.each do |car_wash| %>
+      <tr>
+        <td><%= car_wash.title %></td>
+        <td><%= car_wash.rates %></td>
+        <td><%= car_wash.body %></td>
+        <td><%= car_wash.published_at %></td>
+        <td><%= link_to 'Show', car_wash %></td>
+        <td><%= link_to 'Edit', edit_car_wash_path(car_wash) %></td>
+        <td><%= link_to 'Destroy', car_wash, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Car Wash', new_car_wash_path %>

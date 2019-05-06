@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @car_maintenance.title %>
+</p>
+
+<p>
+  <strong>Rates:</strong>
+  <%= @car_maintenance.rates %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @car_maintenance.body %>
+</p>
+
+<p>
+  <strong>Published at:</strong>
+  <%= @car_maintenance.published_at %>
+</p>
+
+<%= link_to 'Edit', edit_car_maintenance_path(@car_maintenance) %> |
+<%= link_to 'Back', car_maintenances_path %>

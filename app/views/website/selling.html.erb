@@ -1,0 +1,52 @@
+<div class="container_12">
+  <div class="wrapper p5">
+    <article class="grid_12">
+      <section class="uk-section" style="text-align: center">
+        <div class="uk-container">
+          <%@car.each do |mod| %>
+            <div class="uk-child-width-1-2@s uk-grid-match uk-grid-collapse" data-uk-grid data-uk-scrollspy="target: > div; cls:uk-animation-slide-bottom-medium; delay: 400;">
+              <%if mod.id.odd? %>
+                <div class="extra-wrap">
+                  <h3 style="color: #B00100"><%= mod.title %></h3>
+                  <p class="p2"><%= mod.rates %></p>
+                  <p class="p2"><%= mod.details %></p>
+                  <%#= image_tag mod.image_url %>
+                </div>
+              <%else%>
+                <div class="uk-padding-xlarge" style="background-color: #2E2F30;">
+
+                  <div class="tw-element tw-box">
+
+                    <div class="extra-wrap">
+                      <h3 style="color: #B00100"><%= mod.title %></h3>
+                      <p class="p2"><%= mod.rates %></p>
+                      <p class="p2"><%= mod.details %></p>
+
+                      <%#= image_tag mod.image_url %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+
+            </div>
+            </div>
+          <% end %>
+          </section>
+    </article>
+  </div>
+</div>
+
+
+
+<br>
+<div class="container_12">
+  <div class="wrapper p5" style="text-align: center">
+
+
+    <div class="text-center" style="text-align: center">
+      <%= paginate @car %>
+    </div>
+    <br>
+
+  </div>
+</div>
